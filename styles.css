@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #111;
+    color: #fff;
+    animation: fadeIn 1s 2.5s forwards;
+    opacity: 0;
+}
+#loader {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: loaderFadeOut 1s 2.5s forwards;
+}
+#loader-icon {
+    width: 120px;
+    height: 120px;
+    animation: loaderAnim 1.2s infinite cubic-bezier(.68,-0.55,.27,1.55);
+}
+@keyframes loaderAnim {
+    0% { transform: scale(1) rotate(0deg) translateY(0); }
+    20% { transform: scale(1.1) rotate(10deg) translateY(-10px); }
+    40% { transform: scale(0.95) rotate(-10deg) translateY(-20px); }
+    60% { transform: scale(1.05) rotate(5deg) translateY(-10px); }
+    80% { transform: scale(1) rotate(0deg) translateY(0); }
+    100% { transform: scale(1) rotate(0deg) translateY(0); }
+}
+@keyframes loaderFadeOut {
+    to { opacity: 0; visibility: hidden; }
+}
+#main-content {
+    animation: fadeIn 1s 2.5s forwards;
+    opacity: 0;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+header {
+    background: #0f0;
+    color: #111;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px #0008;
+}
+.main-icon {
+    width: 60px;
+    vertical-align: middle;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.2s, text-shadow 0.2s;
+}
+nav a.active, nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+}
+.section {
+    display: none;
+    padding: 40px 20px 20px 20px;
+    min-height: 300px;
+    animation: marioIn 1s;
+    text-align: center;
+}
+.section.active {
+    display: block;
+    animation: marioIn 1s;
+}
+@keyframes marioIn {
+    0% { filter: blur(10px); opacity: 0; transform: scale(0.8); }
+    100% { filter: blur(0); opacity: 1; transform: scale(1); }
+}
+footer {
+    background: #222;
+    color: #0f0;
+    text-align: center;
+    padding: 20px 0 10px 0;
+    margin-top: 40px;
+    font-size: 1em;
+    box-shadow: 0 -2px 10px #0008;
+}
+#frase-final {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    animation: float 2s infinite alternate;
+    pointer-events: none;
+    z-index: 2000;
+}
+@keyframes float {
+    0% { transform: translateX(-50%) translateY(0); }
+    100% { transform: translateX(-50%) translateY(-20px); }
+}
+h1, h2 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
+    font-size: 3em;
+    color: #0f0;
+    text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;
+}
+header h1 {
+    font-size: 2.5em;
+    color: #111;
+    text-shadow: none;
+}
+/* Estilos "Sobre mí" */
+.sobre-mi-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    text-align: left;
+    max-width: 900px;
+    margin: 20px auto;
+}
+.profile-pic {
+    border-radius: 50%;
+    border: 5px solid #0f0;
+    box-shadow: 0 0 20px #0f0;
+}
+/* Estilos Proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+.project-card {
+    background: #222;
+    border: 2px solid #0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px #0f08;
+}
+.project-card img {
+    width: 100%;
+    display: block;
+}
+.project-card h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 1.8em;
+    color: #0f0;
+    margin: 15px;
+}
+.project-card p {
+    padding: 0 15px 15px 15px;
+}
+/* Animación de scroll */
+.anim-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s;
+}
+.anim-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Mario Corriendo */
+.character-container {
+    position: relative;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.mario-char {
+    position: absolute;
+    left: -100px;
+    animation: run-across 5s linear infinite;
+}
+@keyframes run-across {
+    0% { left: -100px; }
+    100% { left: 100%; }
+}
