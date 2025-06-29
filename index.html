@@ -9,9 +9,12 @@
     <script defer src="script.js"></script>
 </head>
 <body>
+    <div class="gojo-fondo-wrapper">
+        <img src="imagenes/gojop.png" alt="Gojo" class="gojo-fondo">
+    </div>
     <!-- Loader animado con el ícono principal -->
     <div id="loader">
-        <img src="icono-oliver.png" alt="Icono Oliver" id="loader-icon">
+        <img src="imagenes/icono1.jpg" alt="Icono de carga" id="loader-icon">
     </div>
     <!-- Contenido principal oculto hasta que cargue -->
     <div id="main-content" style="display:none;">
@@ -19,15 +22,26 @@
             <img src="icono-oliver.png" alt="Icono Oliver" class="main-icon">
             <h1>Oliver</h1>
             <nav>
-                <ul>
-                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                    <li><a href="#sobremi" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                </ul>
+                <div class="search-bar-nav">
+                    <img src="imagenes/dinosaurio.png" alt="Dinosaurio" class="toji-camina">
+                    <span class="search-icon">
+                        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#1DB954" stroke="#fff" stroke-width="4"/>
+                            <path d="M13.5 24.5c3.5-1.2 9.5-1.1 13 0" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M15 21c3-1 7-1 10 0" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                            <path d="M16.5 18c2.1-.7 4.9-.7 7 0" stroke="#fff" stroke-width="1" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <ul>
+                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                        <li><a href="#sobremi" class="nav-link">Sobre mí</a></li>
+                        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
-        <section id="inicio" class="section active">
+        <section id="inicio" class="section active fondo-anime">
             <h2>¡Hey, qué pasa cracks!</h2>
             <p>Soy Oliver, y este es mi portafolio. ¡Prepárate para una experiencia llena de flow!</p>
             <div class="character-container">
@@ -38,21 +52,19 @@
             <h2>Sobre mí</h2>
             <div class="sobre-mi-content">
                 <img src="https://via.placeholder.com/250" alt="Foto de Oliver" class="profile-pic anim-on-scroll">
-                <p class="anim-on-scroll">¡Hola! Soy Oliver, un desarrollador y creador con la misión de construir cosas increíbles en la web. Me inspira la cultura de internet, los videojuegos y, por supuesto, el grande de Fernanfloo. Mi objetivo es combinar código y creatividad para crear experiencias que la gente recuerde. ¡El crack, el boss, el puto amo!</p>
+                <p class="anim-on-scroll">Ando porbando</p>
             </div>
         </section>
         <section id="proyectos" class="section">
             <h2>Mis Proyectos</h2>
             <div class="proyectos-grid">
-                <div class="project-card anim-on-scroll">
-                    <img src="https://via.placeholder.com/400x250/0f0/111?text=Proyecto+1" alt="Proyecto 1">
-                    <h3>Juego del Chorizo</h3>
-                    <p>Un increíble juego de plataformas inspirado en los retos más locos. ¡Demuestra tu habilidad y no te rindas!</p>
+                <div class="project-card anim-on-scroll ppt-card">
+                    <h3>Piedra, Papel o Tijeras</h3>
+                    <button class="abrir-ppt-modal">Jugar</button>
                 </div>
-                <div class="project-card anim-on-scroll">
-                    <img src="https://via.placeholder.com/400x250/fff/111?text=Proyecto+2" alt="Proyecto 2">
+                <div class="project-card anim-on-scroll meme-card">
                     <h3>App de Memes</h3>
-                    <p>La mejor recopilación de memes para compartir con tus papus. Con generador de memes integrado. ¡A reír se ha dicho!</p>
+                    <button class="abrir-meme-modal">Jugar</button>
                 </div>
                 <div class="project-card anim-on-scroll">
                     <img src="https://via.placeholder.com/400x250/222/0f0?text=Proyecto+3" alt="Proyecto 3">
@@ -67,13 +79,103 @@
         </section>
         <footer>
             <p>Sígueme en mis redes sociales:</p>
-            <a href="#">Instagram</a> |
+            <a href="https://instagram.com/oliver_xzzz" target="_blank" class="icon-link">
+                <span class="icon-svg">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="20" height="20" rx="6" fill="#fff"/>
+                        <rect x="2.75" y="2.75" width="18.5" height="18.5" rx="5.25" stroke="#E1306C" stroke-width="1.5"/>
+                        <circle cx="12" cy="12" r="5" stroke="#E1306C" stroke-width="1.5"/>
+                        <circle cx="17" cy="7" r="1" fill="#E1306C"/>
+                    </svg>
+                </span>
+                Instagram
+            </a> |
             <a href="#">YouTube</a> |
             <a href="#">Twitter</a>
             <br>
             <span>Portafolio inspirado en Fernanfloo - Hecho por Oliver</span>
         </footer>
-        <div id="frase-final">ola papus weno eso es todo</div>
+        <div id="frase-final">Ola</div>
     </div>
 </body>
+<!-- Modal Piedra, Papel o Tijeras -->
+<div id="ppt-modal" class="ppt-modal">
+    <div class="ppt-modal-content">
+        <span class="ppt-modal-cerrar">&times;</span>
+        <h3>Piedra, Papel o Tijeras</h3>
+        <div class="ppt-juego">
+            <div class="ppt-elecciones">
+                <button class="ppt-btn" data-eleccion="piedra">🪨</button>
+                <button class="ppt-btn" data-eleccion="papel">📄</button>
+                <button class="ppt-btn" data-eleccion="tijeras">✂️</button>
+            </div>
+            <div class="ppt-resultado">
+                <p>¡Elige tu jugada!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Meme Game -->
+<div id="meme-modal" class="meme-modal">
+    <div class="meme-modal-content">
+        <span class="meme-modal-cerrar">&times;</span>
+        <h3>Elige tu Meme-Personaje</h3>
+        <div class="meme-personajes">
+            <label><input type="radio" name="meme-personaje" value="doge" checked><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Doge"></label>
+            <label><input type="radio" name="meme-personaje" value="troll"><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Trollface"></label>
+            <label><input type="radio" name="meme-personaje" value="cheems"><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Cheems"></label>
+            <label><input type="radio" name="meme-personaje" value="aleatorio"><span class="aleatorio-label">Aleatorio</span></label>
+        </div>
+        <button class="empezar-meme-juego">¡Empezar!</button>
+        <div class="meme-juego-container" style="display:none;"></div>
+    </div>
+</div>
+
+<!-- Modal de Música Spotify -->
+<div id="music-modal" class="music-modal">
+    <div class="music-modal-content">
+        <span class="music-modal-cerrar">&times;</span>
+        <h3>🎵 Mi Música</h3>
+        
+        <!-- Selector de playlist -->
+        <div class="playlist-selector">
+            <button class="playlist-btn active" data-playlist="37i9dQZF1DXcBWIGoYBM5M">🎧 Today's Top Hits</button>
+            <button class="playlist-btn" data-playlist="37i9dQZF1DX5Vy6DFOcx00">🎵 Rock Classics</button>
+            <button class="playlist-btn" data-playlist="37i9dQZF1DX4sWSpwq3LiO">🎶 Peaceful Piano</button>
+            <button class="playlist-btn" data-playlist="37i9dQZF1DX4sWSpwq3LiO">🎤 Hip Hop</button>
+        </div>
+
+        <!-- Reproductor principal -->
+        <div class="spotify-player">
+            <iframe 
+                id="spotify-iframe"
+                style="border-radius:12px" 
+                src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator" 
+                width="100%" 
+                height="352" 
+                frameborder="0" 
+                allowfullscreen="" 
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                loading="lazy">
+            </iframe>
+        </div>
+
+        <!-- Controles adicionales -->
+        <div class="music-controls">
+            <div class="control-info">
+                <p>💡 <strong>Consejos:</strong></p>
+                <ul>
+                    <li>Haz clic en las canciones para reproducir</li>
+                    <li>Cambia de playlist con los botones de arriba</li>
+                    <li>Usa los controles del reproductor para navegar</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="music-info">
+            <p>🎧 ¡Disfruta de mi música favorita mientras exploras mi portafolio!</p>
+            <p class="music-note">💭 <em>Nota: Algunas funciones requieren cuenta de Spotify</em></p>
+        </div>
+    </div>
+</div>
 </html>
