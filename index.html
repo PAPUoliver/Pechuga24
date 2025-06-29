@@ -21,6 +21,14 @@
         <header>
             <img src="icono-oliver.png" alt="Icono Oliver" class="main-icon">
             <h1>Oliver</h1>
+            
+            <!-- Solo el toggle de tema -->
+            <div class="theme-toggle">
+                <button class="theme-btn" id="theme-toggle">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+            
             <nav>
                 <div class="search-bar-nav">
                     <img src="imagenes/dinosaurio.png" alt="Dinosaurio" class="toji-camina">
@@ -37,6 +45,11 @@
                         <li><a href="#sobremi" class="nav-link">Sobre mí</a></li>
                         <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
                         <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                        <!-- Selector de idioma en la navegación -->
+                        <li class="language-nav">
+                            <button class="lang-nav-btn active" data-lang="es" title="Español">🇪🇸</button>
+                            <button class="lang-nav-btn" data-lang="en" title="English">🇺🇸</button>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -45,7 +58,6 @@
             <h2>¡Hey, qué pasa cracks!</h2>
             <p>Soy Oliver, y este es mi portafolio. ¡Prepárate para una experiencia llena de flow!</p>
             <div class="character-container">
-                <img src="https://i.ibb.co/tY32Fm5/mario-run.gif" alt="Mario Corriendo" class="mario-char">
             </div>
         </section>
         <section id="sobremi" class="section">
@@ -121,9 +133,6 @@
         <span class="meme-modal-cerrar">&times;</span>
         <h3>Elige tu Meme-Personaje</h3>
         <div class="meme-personajes">
-            <label><input type="radio" name="meme-personaje" value="doge" checked><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Doge"></label>
-            <label><input type="radio" name="meme-personaje" value="troll"><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Trollface"></label>
-            <label><input type="radio" name="meme-personaje" value="cheems"><img src="https://i.ibb.co/6bQ6w1d/doge.png" alt="Cheems"></label>
             <label><input type="radio" name="meme-personaje" value="aleatorio"><span class="aleatorio-label">Aleatorio</span></label>
         </div>
         <button class="empezar-meme-juego">¡Empezar!</button>
@@ -176,6 +185,17 @@
             <p>🎧 ¡Disfruta de mi música favorita mientras exploras mi portafolio!</p>
             <p class="music-note">💭 <em>Nota: Algunas funciones requieren cuenta de Spotify</em></p>
         </div>
+    </div>
+</div>
+
+<!-- Modal de Despedida -->
+<div id="goodbye-modal" class="goodbye-modal">
+    <div class="goodbye-content">
+        <div class="goodbye-icon">👋</div>
+        <h3 class="goodbye-title">¡Hasta luego!</h3>
+        <p class="goodbye-message">Gracias por visitar mi portafolio. ¡Que tengas un excelente día!</p>
+        <div class="goodbye-time"></div>
+        <button class="goodbye-close">Continuar</button>
     </div>
 </div>
 </html>
